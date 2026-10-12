@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TravelNow - Explore World's Most Beautiful Destinations</title>
+
+    <meta name="description" content="Discover handpicked vacation destinations, luxury stays, scenic getaways, and curated travel guides across the globe with TravelNow.">
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Immediate cache-override for luxury background colors & authentic images -->
+
+    <style>
+
+        body {
+
+            background-color: #faf8f5 !important;
+
+            background-image: 
+
+                radial-gradient(circle at 10% 15%, rgba(2, 132, 199, 0.05) 0%, transparent 45%),
+
+                radial-gradient(circle at 90% 45%, rgba(249, 115, 22, 0.05) 0%, transparent 45%),
+
+                radial-gradient(circle at 35% 85%, rgba(2, 132, 199, 0.04) 0%, transparent 50%) !important;
+
+            background-attachment: fixed !important;
+
+        }
+
+        .hero-section {
+
+            background: url('images/hero_travel_paradise_1791632999033.jpg') center center / cover no-repeat !important;
+
+        }
+
+        .hero-overlay {
+
+            background: linear-gradient(
+
+                180deg,
+
+                rgba(6, 16, 34, 0.45) 0%,
+
+                rgba(10, 24, 48, 0.22) 42%,
+
+                rgba(6, 14, 28, 0.82) 100%
+
+            ) !important;
+
+        }
+
+        .destinations-section {
+
+            background: linear-gradient(180deg, #ffffff 0%, #f4f8fc 100%) !important;
+
+        }
+
+        .about-section {
+
+            background: linear-gradient(135deg, #f8f6f0 0%, #edf4fa 100%) !important;
+
+        }
+
+        .blog-section {
+
+            background: linear-gradient(180deg, #ffffff 0%, #f6f9fc 100%) !important;
+
+        }
+
+        .contact-section {
+
+            background: linear-gradient(180deg, #f4f8fc 0%, #eaf1f8 100%) !important;
+
+        }
+
+        .card-media {
+
+            height: 275px !important;
+
+            background: #0b1322 !important;
+
+        }
+
+        .card-media img {
+
+            filter: saturate(1.1) contrast(1.05) brightness(1.02) !important;
+
+        }
+
+    
+        /* Requested hero layout: text on the left, image on the right */
+        .hero-section {
+            background: none !important;
+            justify-content: flex-start !important;
+            text-align: left !important;
+            overflow: hidden;
+        }
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 50%;
+            background: url('images/hero_travel_paradise_1791632999033.jpg') center center / cover no-repeat;
+            z-index: 0;
+        }
+        .hero-overlay {
+            z-index: 1 !important;
+            background: linear-gradient(90deg, rgba(6, 16, 34, 0.96) 0%, rgba(6, 16, 34, 0.88) 42%, rgba(6, 16, 34, 0.18) 67%, rgba(6, 16, 34, 0.02) 100%) !important;
+        }
+        .hero-section::before {
+            z-index: 1;
+            background: linear-gradient(90deg, rgba(6, 16, 34, 0.10) 0%, transparent 65%);
+        }
+        .hero-content {
+            width: 100%;
+            max-width: 620px !important;
+            margin: 0 auto 0 0 !important;
+            align-items: flex-start !important;
+            text-align: left !important;
+            z-index: 2 !important;
+        }
+        .hero-title, .hero-subtitle { text-align: left !important; }
+        .hero-subtitle { max-width: 100% !important; }
+        .hero-cta-group { justify-content: flex-start !important; }
+        .search-widget {
+            max-width: 100% !important;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-bottom: 2rem;
+        }
+        .search-field { flex: 1 1 130px; min-width: 0; }
+        .search-divider { display: none; }
+        .search-action { flex: 1 1 100%; }
+        .btn-search { width: 100%; justify-content: center; }
+        .hero-stats {
+            max-width: 100% !important;
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            gap: 1rem;
+        }
+        .stat-item { align-items: flex-start !important; }
+        @media (max-width: 768px) {
+            .hero-section { padding-top: 7rem !important; }
+            .hero-section::after { width: 45%; opacity: 0.55; }
+            .hero-overlay { background: linear-gradient(90deg, rgba(6,16,34,0.98) 0%, rgba(6,16,34,0.88) 60%, rgba(6,16,34,0.45) 100%) !important; }
+            .hero-content { max-width: 100% !important; }
+            .hero-title { font-size: 2.3rem !important; }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <!-- Header & Navigation Bar -->
+
+    <header class="site-header" id="header">
+
+        <div class="nav-container">
+
+            <a href="#home" class="brand-logo" id="brand-logo">
+
+                <span class="logo-icon"><i class="fa-solid fa-paper-plane"></i></span>
+
+                <span class="logo-text">Travel<strong>Now</strong></span>
+
+            </a>
+
+
+
+            <nav class="main-nav" id="main-nav">
+
+                <ul class="nav-list">
+
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+
+                    <li><a href="#destinations" class="nav-link">Destination</a></li>
+
+                    <li><a href="#about" class="nav-link">About</a></li>
+
+                    <li><a href="#blog" class="nav-link">Blog</a></li>
+
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+
+                </ul>
+
+            </nav>
+
+
+
+            <div class="header-actions">
+
+                <a href="#destinations" class="btn btn-primary" id="btn-travel-now">
+
+                    <span>Travel Now</span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+        <!-- Hero Section -->
+
+        <section class="hero-section" id="home">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <div class="hero-badge">
+
+                    <i class="fa-solid fa-compass"></i> Explore The Unexplored
+
+                </div>
+
+                <h1 class="hero-title">Experience the Beauty of the World</h1>
+
+                <p class="hero-subtitle">
+
+                    Immerse yourself in breathtaking landscapes, historic architecture, and vibrant cultures. Plan your unforgettable getaway today.
+
+                </p>
+
+                <div class="hero-cta-group">
+
+                    <a href="#destinations" class="btn btn-hero-primary">
+
+                        <i class="fa-solid fa-magnifying-glass-location"></i> Explore Destinations
+
+                    </a>
+
+                    <a href="#about" class="btn btn-hero-secondary">
+
+                        <i class="fa-solid fa-circle-play"></i> Watch Experience
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- Floating Search Widget -->
+
+                <div class="search-widget" id="search-widget">
+
+                    <div class="search-field">
+
+                        <label for="search-location"><i class="fa-solid fa-location-dot"></i> Where to?</label>
+
+                        <input type="text" id="search-location" placeholder="e.g. Bali, Santorini, Kyoto">
+
+                    </div>
+
+                    <div class="search-divider"></div>
+
+                    <div class="search-field">
+
+                        <label for="search-date"><i class="fa-regular fa-calendar"></i> Date</label>
+
+                        <input type="date" id="search-date">
+
+                    </div>
+
+                    <div class="search-divider"></div>
+
+                    <div class="search-field">
+
+                        <label for="search-type"><i class="fa-solid fa-person-hiking"></i> Trip Type</label>
+
+                        <select id="search-type">
+
+                            <option value="all">All Experiences</option>
+
+                            <option value="beach">Tropical & Beach</option>
+
+                            <option value="mountain">Mountain & Adventure</option>
+
+                            <option value="cultural">Heritage & Cultural</option>
+
+                            <option value="luxury">Luxury & Romance</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="search-action">
+
+                        <button class="btn btn-search" id="btn-search-trips">
+
+                            <i class="fa-solid fa-search"></i>
+
+                            <span>Search Trips</span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Hero Quick Stats -->
+
+                <div class="hero-stats">
+
+                    <div class="stat-item">
+
+                        <span class="stat-number">250+</span>
+
+                        <span class="stat-label">Destinations</span>
+
+                    </div>
+
+                    <div class="stat-item">
+
+                        <span class="stat-number">45K+</span>
+
+                        <span class="stat-label">Happy Explorers</span>
+
+                    </div>
+
+                    <div class="stat-item">
+
+                        <span class="stat-number">4.9 ★</span>
+
+                        <span class="stat-label">Average Rating</span>
+
+                    </div>
+
+                    <div class="stat-item">
+
+                        <span class="stat-number">100%</span>
+
+                        <span class="stat-label">Verified Guides</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Destinations Section -->
+
+        <section class="destinations-section" id="destinations">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <span class="section-badge">Top Picks</span>
+
+                    <h2 class="section-title">Popular Destinations</h2>
+
+                    <p class="section-description">
+
+                        Curated collection of the most sought-after holiday destinations around the globe.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- Filter Tags -->
+
+                <div class="destination-filters" id="destination-filters">
+
+                    <button class="filter-btn active" data-category="all">All Places</button>
+
+                    <button class="filter-btn" data-category="beach">Island & Beaches</button>
+
+                    <button class="filter-btn" data-category="mountain">Mountains</button>
+
+                    <button class="filter-btn" data-category="cultural">Culture & History</button>
+
+                    <button class="filter-btn" data-category="luxury">Luxury Escapes</button>
+
+                </div>
+
+
+
+                <!-- Destinations Cards Grid -->
+
+                <div class="destinations-grid" id="destinations-grid">
+
+                    <!-- Card 1: Santorini -->
+
+                    <article class="destination-card" data-category="beach luxury">
+
+                        <div class="card-media">
+
+                            <img src="images/santorini_greece_1791633026910.jpg" alt="Santorini, Greece" loading="lazy">
+
+                            <span class="card-tag tag-bestseller">Top Rated</span>
+
+                            <button class="preview-btn" aria-label="Preview full size image" data-img="images/santorini_greece_1791633026910.jpg" data-title="Aegean Sunset & White Cliffside Villas" data-loc="Santorini, Greece"><i class="fa-solid fa-expand"></i></button>
+
+                            <button class="wishlist-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+
+                            <div class="card-price-pill">From <strong>$1,299</strong></div>
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="card-meta">
+
+                                <span class="location"><i class="fa-solid fa-location-dot"></i> Santorini, Greece</span>
+
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.95 (340)</span>
+
+                            </div>
+
+                            <h3 class="card-title">Aegean Sunset & White Cliffside Villas</h3>
+
+                            <p class="card-summary">Enjoy panoramic caldera vistas, wine tastings at sundown, and iconic blue-domed architecture.</p>
+
+                            <div class="card-footer">
+
+                                <span class="duration"><i class="fa-regular fa-clock"></i> 7 Days / 6 Nights</span>
+
+                                <a href="#contact" class="btn btn-outline-card">Book Now</a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- Card 2: Kyoto -->
+
+                    <article class="destination-card" data-category="cultural">
+
+                        <div class="card-media">
+
+                            <img src="images/kyoto_japan_1791633057491.jpg" alt="Kyoto, Japan" loading="lazy">
+
+                            <span class="card-tag tag-trending">Trending</span>
+
+                            <button class="preview-btn" aria-label="Preview full size image" data-img="images/kyoto_japan_1791633057491.jpg" data-title="Ancient Shrines & Arashiyama Bamboo Grove" data-loc="Kyoto, Japan"><i class="fa-solid fa-expand"></i></button>
+
+                            <button class="wishlist-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+
+                            <div class="card-price-pill">From <strong>$1,450</strong></div>
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="card-meta">
+
+                                <span class="location"><i class="fa-solid fa-location-dot"></i> Kyoto, Japan</span>
+
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.92 (280)</span>
+
+                            </div>
+
+                            <h3 class="card-title">Ancient Shrines & Arashiyama Bamboo Grove</h3>
+
+                            <p class="card-summary">Step into peaceful Zen gardens, historic golden pavilions, and savor traditional tea ceremonies.</p>
+
+                            <div class="card-footer">
+
+                                <span class="duration"><i class="fa-regular fa-clock"></i> 8 Days / 7 Nights</span>
+
+                                <a href="#contact" class="btn btn-outline-card">Book Now</a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- Card 3: Amalfi Coast -->
+
+                    <article class="destination-card" data-category="beach luxury">
+
+                        <div class="card-media">
+
+                            <img src="images/amalfi_positano_1791633092388.jpg" alt="Amalfi Coast, Italy" loading="lazy">
+
+                            <span class="card-tag tag-luxury">Luxury</span>
+
+                            <button class="preview-btn" aria-label="Preview full size image" data-img="images/amalfi_positano_1791633092388.jpg" data-title="Positano Pastel Cliffs & Private Yacht Cruise" data-loc="Positano, Italy"><i class="fa-solid fa-expand"></i></button>
+
+                            <button class="wishlist-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+
+                            <div class="card-price-pill">From <strong>$1,850</strong></div>
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="card-meta">
+
+                                <span class="location"><i class="fa-solid fa-location-dot"></i> Positano, Italy</span>
+
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.98 (410)</span>
+
+                            </div>
+
+                            <h3 class="card-title">Positano Pastel Cliffs & Private Yacht Cruise</h3>
+
+                            <p class="card-summary">Cruise the dazzling Tyrrhenian coast, explore cliffside lemon groves, and dine overlooking the sea.</p>
+
+                            <div class="card-footer">
+
+                                <span class="duration"><i class="fa-regular fa-clock"></i> 6 Days / 5 Nights</span>
+
+                                <a href="#contact" class="btn btn-outline-card">Book Now</a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- Card 4: Bali -->
+
+                    <article class="destination-card" data-category="beach cultural">
+
+                        <div class="card-media">
+
+                            <img src="images/bali_ubud_terraces_1791633131389.jpg" alt="Bali, Indonesia" loading="lazy">
+
+                            <span class="card-tag tag-bestseller">Best Value</span>
+
+                            <button class="preview-btn" aria-label="Preview full size image" data-img="images/bali_ubud_terraces_1791633131389.jpg" data-title="Tropical Jungle Retreat & Coral Reef Snorkel" data-loc="Ubud & Nusa, Bali"><i class="fa-solid fa-expand"></i></button>
+
+                            <button class="wishlist-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+
+                            <div class="card-price-pill">From <strong>$890</strong></div>
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="card-meta">
+
+                                <span class="location"><i class="fa-solid fa-location-dot"></i> Ubud & Nusa, Bali</span>
+
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.88 (520)</span>
+
+                            </div>
+
+                            <h3 class="card-title">Tropical Jungle Retreat & Coral Reef Snorkel</h3>
+
+                            <p class="card-summary">Soak in lush green rice terraces, sacred waterfall cleanses, and pristine white sand beaches.</p>
+
+                            <div class="card-footer">
+
+                                <span class="duration"><i class="fa-regular fa-clock"></i> 10 Days / 9 Nights</span>
+
+                                <a href="#contact" class="btn btn-outline-card">Book Now</a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- Card 5: Swiss Alps -->
+
+                    <article class="destination-card" data-category="mountain luxury">
+
+                        <div class="card-media">
+
+                            <img src="images/swiss_alps_matterhorn_1791633175188.jpg" alt="Swiss Alps, Switzerland" loading="lazy">
+
+                            <span class="card-tag tag-trending">Adventure</span>
+
+                            <button class="preview-btn" aria-label="Preview full size image" data-img="images/swiss_alps_matterhorn_1791633175188.jpg" data-title="Matterhorn Peaks & Glacier Express Scenic Rail" data-loc="Zermatt, Switzerland"><i class="fa-solid fa-expand"></i></button>
+
+                            <button class="wishlist-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+
+                            <div class="card-price-pill">From <strong>$2,190</strong></div>
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="card-meta">
+
+                                <span class="location"><i class="fa-solid fa-location-dot"></i> Zermatt, Switzerland</span>
+
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.96 (195)</span>
+
+                            </div>
+
+                            <h3 class="card-title">Matterhorn Peaks & Glacier Express Scenic Rail</h3>
+
+                            <p class="card-summary">Majestic snow-capped alpine panoramas, luxury chalet fireplaces, and legendary Swiss rail journeys.</p>
+
+                            <div class="card-footer">
+
+                                <span class="duration"><i class="fa-regular fa-clock"></i> 7 Days / 6 Nights</span>
+
+                                <a href="#contact" class="btn btn-outline-card">Book Now</a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- Card 6: Serengeti Safari -->
+
+                    <article class="destination-card" data-category="mountain cultural">
+
+                        <div class="card-media">
+
+                            <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1000&q=85" alt="Serengeti Safari, Tanzania" loading="lazy">
+
+                            <span class="card-tag tag-luxury">Wildlife Safari</span>
+
+                            <button class="preview-btn" aria-label="Preview full size image" data-img="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1400&q=85" data-title="Great Migration & Luxury Savannah Glamping" data-loc="Serengeti, Tanzania"><i class="fa-solid fa-expand"></i></button>
+
+                            <button class="wishlist-btn" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+
+                            <div class="card-price-pill">From <strong>$2,600</strong></div>
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="card-meta">
+
+                                <span class="location"><i class="fa-solid fa-location-dot"></i> Serengeti, Tanzania</span>
+
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.97 (310)</span>
+
+                            </div>
+
+                            <h3 class="card-title">Great Migration & Luxury Savannah Glamping</h3>
+
+                            <p class="card-summary">Witness the wonders of the African wilderness with experienced trackers under starlit skies.</p>
+
+                            <div class="card-footer">
+
+                                <span class="duration"><i class="fa-regular fa-clock"></i> 9 Days / 8 Nights</span>
+
+                                <a href="#contact" class="btn btn-outline-card">Book Now</a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- About Us Section -->
+
+        <section class="about-section" id="about">
+
+            <div class="container">
+
+                <div class="about-grid">
+
+                    <div class="about-images">
+
+                        <div class="about-img-box primary-box">
+
+                            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=700&q=80" alt="Traveler overlooking scenic view" loading="lazy">
+
+                        </div>
+
+                        <div class="about-img-box secondary-box">
+
+                            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Alpine lake nature landscape" loading="lazy">
+
+                        </div>
+
+                        <div class="experience-badge">
+
+                            <span class="badge-num">12+</span>
+
+                            <span class="badge-text">Years of Curating Perfect Journeys</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="about-text-content">
+
+                        <span class="section-badge">Why Travel With Us</span>
+
+                        <h2 class="section-title">We Transform Travel Dreams Into Unforgettable Realities</h2>
+
+                        <p class="about-lead">
+
+                            At <strong>TravelNow</strong>, we believe travel is more than just visiting places—it's about connection, discovery, and effortless peace of mind.
+
+                        </p>
+
+                        <p class="about-body">
+
+                            Our team of seasoned travel architects partners with certified local guides worldwide to build personalized, sustainable, and high-standard vacation packages tailored to your lifestyle.
+
+                        </p>
+
+
+
+                        <div class="features-list">
+
+                            <div class="feature-card">
+
+                                <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+
+                                <div class="feature-info">
+
+                                    <h4>100% Safe & Secure Booking</h4>
+
+                                    <p>Guaranteed flexible cancellations, insured trips, and secure transaction handling.</p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="feature-card">
+
+                                <div class="feature-icon"><i class="fa-solid fa-hotel"></i></div>
+
+                                <div class="feature-info">
+
+                                    <h4>Handpicked Luxury Stays</h4>
+
+                                    <p>Strictly vetted boutique hotels, private villas, and authentic eco-lodges.</p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="feature-card">
+
+                                <div class="feature-icon"><i class="fa-solid fa-headset"></i></div>
+
+                                <div class="feature-info">
+
+                                    <h4>24/7 Dedicated Concierge</h4>
+
+                                    <p>Round-the-clock support from your dedicated travel specialist from start to return.</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="about-action">
+
+                            <a href="#destinations" class="btn btn-primary">Discover All Packages</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Travel Blog & Stories Section -->
+
+        <section class="blog-section" id="blog">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <span class="section-badge">Our Journal</span>
+
+                    <h2 class="section-title">Latest Travel Guides & Stories</h2>
+
+                    <p class="section-description">
+
+                        Inspiration, insider tips, and practical guides curated by passionate globetrotters.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="blog-grid">
+
+                    <!-- Article 1 -->
+
+                    <article class="blog-card">
+
+                        <div class="blog-media">
+
+                            <img src="https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?auto=format&fit=crop&w=800&q=80" alt="Southern Europe coastal road" loading="lazy">
+
+                            <span class="blog-category">Travel Tips</span>
+
+                        </div>
+
+                        <div class="blog-content">
+
+                            <div class="blog-meta">
+
+                                <span><i class="fa-regular fa-calendar"></i> October 2026</span>
+
+                                <span><i class="fa-regular fa-clock"></i> 5 min read</span>
+
+                            </div>
+
+                            <h3 class="blog-title"><a href="#">Top 10 Hidden Coastal Gems in Southern Europe</a></h3>
+
+                            <p class="blog-excerpt">Step off the beaten path and explore secret coves, sun-drenched vineyards, and quaint stone hamlets away from crowds.</p>
+
+                            <a href="#" class="blog-read-more">Read Full Story <i class="fa-solid fa-arrow-right"></i></a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- Article 2 -->
+
+                    <article class="blog-card">
+
+                        <div class="blog-media">
+
+                            <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=800&q=80" alt="Tokyo street food night market" loading="lazy">
+
+                            <span class="blog-category">Culinary</span>
+
+                        </div>
+
+                        <div class="blog-content">
+
+                            <div class="blog-meta">
+
+                                <span><i class="fa-regular fa-calendar"></i> September 2026</span>
+
+                                <span><i class="fa-regular fa-clock"></i> 7 min read</span>
+
+                            </div>
+
+                            <h3 class="blog-title"><a href="#">A Foodie's Ultimate Guide to Japan's Alleyway Delicacies</a></h3>
+
+                            <p class="blog-excerpt">From sizzling takoyaki to comforting steaming ramen, discover the culinary treasures of Kyoto, Osaka, and Tokyo.</p>
+
+                            <a href="#" class="blog-read-more">Read Full Story <i class="fa-solid fa-arrow-right"></i></a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- Article 3 -->
+
+                    <article class="blog-card">
+
+                        <div class="blog-media">
+
+                            <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&q=80" alt="Road trip desert landscape" loading="lazy">
+
+                            <span class="blog-category">Inspiration</span>
+
+                        </div>
+
+                        <div class="blog-content">
+
+                            <div class="blog-meta">
+
+                                <span><i class="fa-regular fa-calendar"></i> August 2026</span>
+
+                                <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+
+                            </div>
+
+                            <h3 class="blog-title"><a href="#">The Art of Mindful & Sustainable Travel in 2026</a></h3>
+
+                            <p class="blog-excerpt">Learn how to minimize your carbon footprint while uplifting local artisan communities and preserving wild ecosystems.</p>
+
+                            <a href="#" class="blog-read-more">Read Full Story <i class="fa-solid fa-arrow-right"></i></a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Newsletter CTA -->
+
+        <section class="newsletter-section">
+
+            <div class="container">
+
+                <div class="newsletter-card">
+
+                    <div class="newsletter-content">
+
+                        <span class="newsletter-tag"><i class="fa-solid fa-gift"></i> Special Offer</span>
+
+                        <h2 class="newsletter-title">Get 20% Off Your First Trip!</h2>
+
+                        <p class="newsletter-desc">Subscribe to our newsletter and receive curated travel recommendations, flash discounts, and VIP flight alerts directly to your inbox.</p>
+
+                    </div>
+
+                    <form class="newsletter-form" id="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing! Your discount code is TRAVEL20');">
+
+                        <div class="input-group">
+
+                            <input type="email" placeholder="Enter your email address" required>
+
+                            <button type="submit" class="btn btn-subscribe">Subscribe</button>
+
+                        </div>
+
+                        <span class="form-privacy"><i class="fa-solid fa-lock"></i> No spam. Unsubscribe at any time.</span>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Contact Section -->
+
+        <section class="contact-section" id="contact">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <span class="section-badge">Get In Touch</span>
+
+                    <h2 class="section-title">Plan Your Custom Itinerary</h2>
+
+                    <p class="section-description">
+
+                        Have questions about a destination or want a tailored trip? Reach out to our travel specialists today.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="contact-grid">
+
+                    <!-- Contact Information Cards -->
+
+                    <div class="contact-info-panel">
+
+                        <h3 class="panel-title">Let's Connect</h3>
+
+                        <p class="panel-desc">We are here to help you design an unforgettable journey. Feel free to contact us through any of the channels below.</p>
+
+
+
+                        <div class="info-items">
+
+                            <div class="info-item">
+
+                                <div class="info-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+
+                                <div class="info-details">
+
+                                    <span class="info-label">Main Office</span>
+
+                                    <span class="info-value">742 Evergreen Boulevard, Suite 500, New York, NY</span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="info-item">
+
+                                <div class="info-icon"><i class="fa-solid fa-phone-volume"></i></div>
+
+                                <div class="info-details">
+
+                                    <span class="info-label">Phone & WhatsApp</span>
+
+                                    <span class="info-value">+1 (800) 456-7890 / +1 (212) 555-0199</span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="info-item">
+
+                                <div class="info-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+
+                                <div class="info-details">
+
+                                    <span class="info-label">Email Inquiries</span>
+
+                                    <span class="info-value">concierge@travelnow.com</span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="info-item">
+
+                                <div class="info-icon"><i class="fa-regular fa-clock"></i></div>
+
+                                <div class="info-details">
+
+                                    <span class="info-label">Support Hours</span>
+
+                                    <span class="info-value">Mon - Sat: 8:00 AM – 10:00 PM (EST)</span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Social Handles -->
+
+                        <div class="social-block">
+
+                            <span class="social-title">Follow Our Adventures:</span>
+
+                            <div class="social-links">
+
+                                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+
+                                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+
+                                <a href="#" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+
+                                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+
+                                <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Contact Form -->
+
+                    <div class="contact-form-panel">
+
+                        <form class="contact-form" id="contact-form" onsubmit="event.preventDefault(); alert('Thank you! Our travel expert will contact you within 24 hours.');">
+
+                            <h3 class="panel-title">Send Us a Message</h3>
+
+                            <div class="form-row">
+
+                                <div class="form-group">
+
+                                    <label for="contact-name">Your Full Name *</label>
+
+                                    <input type="text" id="contact-name" placeholder="John Doe" required>
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <label for="contact-email">Email Address *</label>
+
+                                    <input type="email" id="contact-email" placeholder="john@example.com" required>
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-row">
+
+                                <div class="form-group">
+
+                                    <label for="contact-destination">Interested Destination</label>
+
+                                    <select id="contact-destination">
+
+                                        <option value="">Select Destination...</option>
+
+                                        <option value="santorini">Santorini, Greece</option>
+
+                                        <option value="kyoto">Kyoto, Japan</option>
+
+                                        <option value="amalfi">Amalfi Coast, Italy</option>
+
+                                        <option value="bali">Bali, Indonesia</option>
+
+                                        <option value="swiss">Swiss Alps, Switzerland</option>
+
+                                        <option value="serengeti">Serengeti Safari, Tanzania</option>
+
+                                        <option value="custom">Custom / Other Destination</option>
+
+                                    </select>
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <label for="contact-travelers">Number of Travelers</label>
+
+                                    <input type="number" id="contact-travelers" min="1" max="50" placeholder="e.g. 2">
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label for="contact-message">Tell us about your trip plans *</label>
+
+                                <textarea id="contact-message" rows="4" placeholder="Mention your estimated dates, preferences, budget, or any special requests..." required></textarea>
+
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-submit">
+
+                                <span>Send Inquiry</span>
+
+                                <i class="fa-solid fa-paper-plane"></i>
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- Footer -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-top">
+
+            <div class="footer-col brand-col">
+
+                <a href="#home" class="brand-logo footer-logo">
+
+                    <span class="logo-icon"><i class="fa-solid fa-paper-plane"></i></span>
+
+                    <span class="logo-text">Travel<strong>Now</strong></span>
+
+                </a>
+
+                <p class="footer-desc">
+
+                    Inspiring and enabling people to discover the world's most authentic destinations safely and sustainably.
+
+                </p>
+
+                <div class="footer-badges">
+
+                    <span><i class="fa-solid fa-award"></i> World Travel Award 2025</span>
+
+                    <span><i class="fa-solid fa-leaf"></i> 100% Eco-Certified Tours</span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="footer-col">
+
+                <h4 class="footer-heading">Navigation</h4>
+
+                <ul class="footer-links">
+
+                    <li><a href="#home">Home</a></li>
+
+                    <li><a href="#destinations">Destinations</a></li>
+
+                    <li><a href="#about">About Us</a></li>
+
+                    <li><a href="#blog">Travel Blog</a></li>
+
+                    <li><a href="#contact">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+
+
+            <div class="footer-col">
+
+                <h4 class="footer-heading">Top Destinations</h4>
+
+                <ul class="footer-links">
+
+                    <li><a href="#destinations">Santorini, Greece</a></li>
+
+                    <li><a href="#destinations">Kyoto, Japan</a></li>
+
+                    <li><a href="#destinations">Amalfi Coast, Italy</a></li>
+
+                    <li><a href="#destinations">Bali & Nusa Islands</a></li>
+
+                    <li><a href="#destinations">Swiss Alps, Switzerland</a></li>
+
+                </ul>
+
+            </div>
+
+
+
+            <div class="footer-col">
+
+                <h4 class="footer-heading">Legal & Support</h4>
+
+                <ul class="footer-links">
+
+                    <li><a href="#">Privacy Policy</a></li>
+
+                    <li><a href="#">Terms of Service</a></li>
+
+                    <li><a href="#">Booking Guarantee</a></li>
+
+                    <li><a href="#">COVID-19 Travel Advice</a></li>
+
+                    <li><a href="#">Help & FAQs</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <div class="container bottom-flex">
+
+                <p class="copyright">© 2026 TravelNow Global Inc. All rights reserved.</p>
+
+                <div class="bottom-links">
+
+                    <a href="#">Security</a>
+
+                    <a href="#">Sitemap</a>
+
+                    <a href="#">Cookies</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Photo Lightbox Modal for Authentic HD Previews -->
+
+    <div class="photo-lightbox" id="photo-lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+
+        <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+
+        <div class="lightbox-content">
+
+            <button class="lightbox-close" id="lightbox-close" aria-label="Close photo preview">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+            <div class="lightbox-image-wrap">
+
+                <img id="lightbox-img" src="" alt="High resolution preview">
+
+            </div>
+
+            <div class="lightbox-caption">
+
+                <div class="caption-text">
+
+                    <h3 id="lightbox-title">Destination Title</h3>
+
+                    <p id="lightbox-loc"><i class="fa-solid fa-location-dot"></i> Destination Location</p>
+
+                </div>
+
+                <div class="caption-badge">
+
+                    <span><i class="fa-solid fa-circle-check"></i> 100% Authentic Photo</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Interactive Logic -->
+
+    <script>
+
+        // Header shadow and active link highlighting on scroll
+
+        const header = document.getElementById('header');
+
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        const sections = document.querySelectorAll('section[id]');
+
+
+
+        window.addEventListener('scroll', () => {
+
+            if (window.scrollY > 40) {
+
+                header.classList.add('scrolled');
+
+            } else {
+
+                header.classList.remove('scrolled');
+
+            }
+
+
+
+            // Scroll spy for active menu items
+
+            let current = '';
+
+            const scrollPos = window.pageYOffset + 120;
+
+            sections.forEach(section => {
+
+                const sectionTop = section.offsetTop;
+
+                const sectionHeight = section.offsetHeight;
+
+                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+
+                    current = section.getAttribute('id');
+
+                }
+
+            });
+
+
+
+            navLinks.forEach(link => {
+
+                link.classList.remove('active');
+
+                if (link.getAttribute('href') === `#${current}`) {
+
+                    link.classList.add('active');
+
+                }
+
+            });
+
+        });
+
+
+
+        // Mobile Menu Toggle
+
+        const mobileToggle = document.getElementById('mobile-toggle');
+
+        const mainNav = document.getElementById('main-nav');
+
+
+
+        mobileToggle.addEventListener('click', () => {
+
+            mainNav.classList.toggle('nav-open');
+
+            const icon = mobileToggle.querySelector('i');
+
+            if (mainNav.classList.contains('nav-open')) {
+
+                icon.className = 'fa-solid fa-xmark';
+
+            } else {
+
+                icon.className = 'fa-solid fa-bars';
+
+            }
+
+        });
+
+
+
+        // Close mobile nav when clicking a link
+
+        navLinks.forEach(link => {
+
+            link.addEventListener('click', () => {
+
+                if (mainNav.classList.contains('nav-open')) {
+
+                    mainNav.classList.remove('nav-open');
+
+                    mobileToggle.querySelector('i').className = 'fa-solid fa-bars';
+
+                }
+
+            });
+
+        });
+
+
+
+        // Destination Category Filter
+
+        const filterBtns = document.querySelectorAll('.filter-btn');
+
+        const destinationCards = document.querySelectorAll('.destination-card');
+
+
+
+        filterBtns.forEach(btn => {
+
+            btn.addEventListener('click', () => {
+
+                filterBtns.forEach(b => b.classList.remove('active'));
+
+                btn.classList.add('active');
+
+
+
+                const filterValue = btn.getAttribute('data-category');
+
+
+
+                destinationCards.forEach(card => {
+
+                    if (filterValue === 'all' || card.getAttribute('data-category').includes(filterValue)) {
+
+                        card.style.display = 'flex';
+
+                        card.style.animation = 'fadeInCard 0.4s ease forwards';
+
+                    } else {
+
+                        card.style.display = 'none';
+
+                    }
+
+                });
+
+            });
+
+        });
+
+
+
+        // Wishlist heart toggle
+
+        document.querySelectorAll('.wishlist-btn').forEach(btn => {
+
+            btn.addEventListener('click', (e) => {
+
+                e.stopPropagation();
+
+                const icon = btn.querySelector('i');
+
+                if (icon.classList.contains('fa-regular')) {
+
+                    icon.classList.remove('fa-regular');
+
+                    icon.classList.add('fa-solid');
+
+                    icon.style.color = '#e11d48';
+
+                } else {
+
+                    icon.classList.remove('fa-solid');
+
+                    icon.classList.add('fa-regular');
+
+                    icon.style.color = '';
+
+                }
+
+            });
+
+        });
+
+
+
+        // Destination Search filter demo
+
+        const searchBtn = document.getElementById('btn-search-trips');
+
+        const searchInput = document.getElementById('search-location');
+
+
+
+        searchBtn.addEventListener('click', () => {
+
+            const query = searchInput.value.toLowerCase().trim();
+
+            if (!query) {
+
+                // Scroll to destinations
+
+                document.getElementById('destinations').scrollIntoView({ behavior: 'smooth' });
+
+                return;
+
+            }
+
+
+
+            let found = false;
+
+            destinationCards.forEach(card => {
+
+                const cardText = card.textContent.toLowerCase();
+
+                if (cardText.includes(query)) {
+
+                    card.style.display = 'flex';
+
+                    found = true;
+
+                } else {
+
+                    card.style.display = 'none';
+
+                }
+
+            });
+
+
+
+            document.getElementById('destinations').scrollIntoView({ behavior: 'smooth' });
+
+        });
+
+
+
+        // Photo Lightbox for Authentic Previews
+
+        const lightbox = document.getElementById('photo-lightbox');
+
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        const lightboxTitle = document.getElementById('lightbox-title');
+
+        const lightboxLoc = document.getElementById('lightbox-loc');
+
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        const lightboxBackdrop = document.getElementById('lightbox-backdrop');
+
+
+
+        function openLightbox(src, title, loc) {
+
+            lightboxImg.src = src;
+
+            lightboxTitle.textContent = title;
+
+            lightboxLoc.innerHTML = `<i class="fa-solid fa-location-dot"></i> ${loc}`;
+
+            lightbox.classList.add('active');
+
+            lightbox.setAttribute('aria-hidden', 'false');
+
+            document.body.style.overflow = 'hidden';
+
+        }
+
+
+
+        function closeLightbox() {
+
+            lightbox.classList.remove('active');
+
+            lightbox.setAttribute('aria-hidden', 'true');
+
+            document.body.style.overflow = '';
+
+        }
+
+
+
+        document.querySelectorAll('.preview-btn').forEach(btn => {
+
+            btn.addEventListener('click', (e) => {
+
+                e.stopPropagation();
+
+                const img = btn.getAttribute('data-img');
+
+                const title = btn.getAttribute('data-title');
+
+                const loc = btn.getAttribute('data-loc');
+
+                openLightbox(img, title, loc);
+
+            });
+
+        });
+
+
+
+        document.querySelectorAll('.card-media img').forEach(img => {
+
+            img.style.cursor = 'zoom-in';
+
+            img.addEventListener('click', () => {
+
+                const card = img.closest('.destination-card');
+
+                const title = card.querySelector('.card-title').textContent;
+
+                const loc = card.querySelector('.location').textContent.trim();
+
+                openLightbox(img.src, title, loc);
+
+            });
+
+        });
+
+
+
+        lightboxClose.addEventListener('click', closeLightbox);
+
+        lightboxBackdrop.addEventListener('click', closeLightbox);
+
+        document.addEventListener('keydown', (e) => {
+
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+
+                closeLightbox();
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
